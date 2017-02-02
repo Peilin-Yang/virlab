@@ -29,7 +29,7 @@ Please cite the following paper if your are using it someway...
 
 Apache+MySQL+PHP
 
-__notice: only tested on Ubuntu 14.04_
+_notice: only tested on Ubuntu 14.04_
 
 ## Installation 
 
