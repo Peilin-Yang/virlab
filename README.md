@@ -35,14 +35,23 @@ _notice: only tested on Ubuntu 14.04_
 
 ```
 git clone git@github.com:Peilin-Yang/virlab.git
+```
+
+In conf/conf.php, replace the password and UserGroup as:
+
+```
+if (!defined('DBPASS')) define('DBPASS','yourpassword');
+if (!defined('MyUserGroupID')) define('MyUserGroupID', '1');
+```
+
+```
 cd virlab/siteconf
 sudo ./setup.sh
 sudo ./fetch_index.sh
-mysql -u <username> -p < virlab.sql
+mysql -u <username> -p < virlab.sql.zip
 ```
 Go to your web browser and type `localhost/whoiam.php`
 Remember the output and run
 `sudo ./permission.sh <output>`
-
 
 
