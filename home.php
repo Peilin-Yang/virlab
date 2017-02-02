@@ -17,7 +17,7 @@ include("navigation.php"); ?>
 		echo "Welcome,".$_SESSION['user'];
 		echo ",<a href=\"logout.php\">logout</a></p><br/>\n";
                 echo "<br/>\n";
-		echo "<b><font color='red'>A brief tutorial of the system is available <a href=\"source/tutorial.pdf\">here</a></font></b><br/>\n";
+		echo "<b><font color='red'>A brief tutorial of the system is available <a href=\"static/img/tutorial.pdf\">here</a></font></b><br/>\n";
 
 	}
 	else
