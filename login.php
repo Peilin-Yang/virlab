@@ -31,7 +31,7 @@ require_once ("include/mysql_connect.php");
   	<div class="background">
   	  <div class="container">
   	  	<div style="background-color:#0769AD; margin-bottom:20px;">
-  	  		<a href="/"><img src="source/logo.png"></a>
+  	  		<a href="/"><img src="static/img/logo.png"></a>
   	  	</div>
 
   	  	<div class="row">

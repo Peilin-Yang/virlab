@@ -30,7 +30,7 @@
   	<div class="background">
   	  <div class="container">
   	  	<div style="background-color:#0769AD; margin-bottom:20px;">
-  	  		<a href="home.php"><img src="source/logo.png"></a>
+  	  		<a href="home.php"><img src="static/img/logo.png"></a>
   	  	</div>
 
   	  	<div class="row">

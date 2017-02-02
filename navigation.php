@@ -29,7 +29,7 @@
 <?php
 	if(isset($_SESSION['user']) && isset($_SESSION['admin']) && ($_SESSION['admin']==255 || $_SESSION['admin']==127))
 	{
-		echo "<li><a href=\"addUser.php\">Add User</a></li><li><a href=\"manageUser.php\">Manager Users</a></li><li><a href=\"buildIndex.php\">Build Index</a></li><li><a href=\"setCollection.php\">Set Collection</a></li>\n";
+		echo "<li><a href=\"addUser.php\">Add User</a></li><li><a href=\"manageUser.php\">Manage Users</a></li><li><a href=\"buildIndex.php\">Build Index</a></li><li><a href=\"setCollection.php\">Set Collection</a></li>\n";
 	}
 ?>
 	</ul></aside>

@@ -19,7 +19,7 @@
 
 <div id="container">
 <div id="logo-events" class="constrain clearfix">
-<?php echo "<a href=\"$myBasePath/../home.php\"><img src=\"$myBasePath/../source/logo.png\"></a>\n"; ?>
+<?php echo "<a href=\"$myBasePath/../home.php\"><img src=\"$myBasePath/../static/img/logo.png\"></a>\n"; ?>
 <nav id="main" class="constrain clearfix"> </nav>
 <div id="content-wrapper" class="clearfix row">
 
