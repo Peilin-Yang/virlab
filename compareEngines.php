@@ -667,40 +667,43 @@ require_once ("include/compareHeader.php");
 	        <div class="modal-body">
 				<div class="accordion" id="oq">
 				<?php
-					global $mhysql;
+					global $mysql;
 					if(($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["collection"]) && strlen($_GET["collection"])>0) 
 						|| ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["collection"]) && strlen($_POST["collection"])>0)){
 						$IndexName=$_SERVER['REQUEST_METHOD'] === 'GET'?$_GET["collection"]:$_POST["collection"];
-						$query="select collectionName from collection where collectionName = '$IndexName'";
+						$query="select collectionID, collectionName from collection where collectionName = '$IndexName'";
 						$result = $mysql->query($query);
 						if(!$result) echo "Could not run query.<br/>\n";
 						$idx = 0;
 						while($row = $result->fetch_row())
 						{
-							$theCollection = $row[0];
+							$collectionID = $row[0];
+							$collectionName = $row[1];
 							//echo "<h3>$theCollection</h3>\n";
 							echo "<div class=\"accordion-group\">
 								    <div class=\"accordion-heading\">
 								      <a class=\"accordion-toggle\" data-toggle=\"collapse\" data-parent=\"#oq\" href=\"#collapse$idx\">
-								        $theCollection
+								        $collectionName
 								      </a>
 								    </div>
 								    <div id=\"collapse$idx\" class=\"accordion-body collapse\">
 								      <div class=\"accordion-inner\">\n";
-							$theQuery = "qry_$theCollection";
+							$theQuery = "qry";
 							//echo "<div>\n";
-							$query="select topic,query from $theQuery";
+							$query="select topic,query from qry where collectionID=$collectionID";
 							$result2 = $mysql->query($query);
 							if(!$result2) echo "Could not run query.<br/>\n";
-							while($row2 = $result2->fetch_row())
-							{
-								$topic=$row2[0];
-								$qry=$row2[1];
-								//echo "<a href='search.php?qry=$qry&collection=$theCollection&topic=$topic'>$topic:$qry</a><br/>\n";
-								echo "<a class=\"official_q\" value=\"$qry\">$topic:$qry</a><br/>\n";
+							else {
+								while($row2 = $result2->fetch_row())
+								{
+									$topic=$row2[0];
+									$qry=$row2[1];
+									//echo "<a href='search.php?qry=$qry&collection=$theCollection&topic=$topic'>$topic:$qry</a><br/>\n";
+									echo "<a class=\"official_q\" value=\"$qry\">$topic:$qry</a><br/>\n";
+								}
+								$idx++;
+								$result2->free();
 							}
-							$idx++;
-							$result2->free();
 							echo "</div>
 							    </div>
 							  </div>\n";

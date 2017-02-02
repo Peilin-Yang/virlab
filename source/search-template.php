@@ -1,3 +1,16 @@
+<?php
+require_once (__DIR__."/../include/superHead.php"); 
+require_once (__DIR__."/../conf/conf.php");
+$phpExMessage="";
+require_once (__DIR__."/../include/mysql_connect.php");
+$myRetProgram="$myBasePath/source/retrieval-f-qry";
+$myCache="cache";
+$mySnippet="snippet";
+$mySnippetProgram="$myBasePath/source/getSnippet";
+$myShowDocPhp="$myBasePath/source/showDoc.php";
+if($myIndexPath[0]!='/') $myIndexPath = $myBasePath."/".$myIndexPath;
+?>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="author" content="Hao Wu">
@@ -49,21 +62,6 @@ $( "#accordion" ).accordion({ heightStyle: "content" });
 });
 
 </script>
-
-<?php
-require_once (__DIR__."/../include/superHead.php"); 
-require_once (__DIR__."/../conf/conf.php");
-$phpExMessage="";
-require_once (__DIR__."/../include/mysql_connect.php");
-include_once (__DIR__."/../head.html");
-include_once (__DIR__."/../navigation.php");
-$myRetProgram="$myBasePath/source/retrieval-f-qry";
-$myCache="cache";
-$mySnippet="snippet";
-$mySnippetProgram="$myBasePath/source/getSnippet";
-$myShowDocPhp="$myBasePath/source/showDoc.php";
-if($myIndexPath[0]!='/') $myIndexPath = $myBasePath."/".$myIndexPath;
-?>
 
 <form action="search.php" method="get">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
