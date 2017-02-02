@@ -51,7 +51,6 @@ function evaTopic($indexPath,$funcPath,$collectionID,$topic,$theQry)
 	$rank=0;
 	while($line=fgets($file))
 	{
-		var_dump($line);
 		$item=explode("\t",$line);
 		//echo "$line<br/>\n";
 		$doc=$item[1];
