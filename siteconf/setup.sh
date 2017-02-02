@@ -8,6 +8,7 @@ mkdir -p /var/www/virlab/backups
 
 cp virlab.conf /etc/apache2/sites-available/virlab.conf
 cp -rf ../* /var/www/virlab/public_html/
+cp -rf users /var/www/virlab/public_html/
 
 a2ensite virlab.conf
 service apache2 restart
