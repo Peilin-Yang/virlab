@@ -126,7 +126,7 @@ function initialUser($userID)
 		if(isset($_POST['addUsername']) && !empty($_POST['addUsername']) &&!empty($_POST['addPassword']) && !empty($_POST['affiliation']) && !empty($_POST['email']))
 		{
 			$loginName = $_POST['addUsername'];
-			$password = sha1('wh'.$_POST['addPassword']);
+			$password = sha1(passsalt.$_POST['addPassword']);
 			$firstName = $_POST['firstName'];
 			$lastName = $_POST['lastName'];
 			$affiliation = $_POST['affiliation'];

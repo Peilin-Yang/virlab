@@ -1,20 +1,19 @@
 <?php 
-  include("include/superHead.php");
-  include("include/mysql_connect.php");
-?>
-
-<?php
+require_once ("include/superHead.php"); 
+require_once ("conf/conf.php");
+$phpExMessage="";
+require_once ("include/mysql_connect.php");
 
 function getAllUsers() {
-    $sql_user = mysqli_connect('p:'.MysqlHost,MysqlUser,MysqlPassword,'users2',MysqlPort);
+    global $mysql;
     $all_users = array();
 
     $query="select * from user where userType >= 1 and userGroup = " . MyUserGroupID;
-    $result = mysqli_query($sql_user,$query);
+    $result = $mysql->query($query);
     if(!$result) echo "Could not get index list.<br/>\n";
     else
     {
-        while($row = mysqli_fetch_row($result))
+        while($row = $result->fetch_row())
         {
             $userID = $row[0];
             $loginName = $row[1];
@@ -23,9 +22,7 @@ function getAllUsers() {
             $all_users[] = array($userID, $loginName, $firstName, $lastName);
         }
     }
-
-    mysqli_close($sql_user);
-
+    $result->free();
     return $all_users;
 }
 
