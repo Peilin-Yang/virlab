@@ -47,6 +47,7 @@ function evaTopic($indexPath,$funcPath,$collectionID,$topic,$theQry)
 	}
 	
 	$com=RetrievalProgramDirect." $indexPath $funcPath $theQry";
+	//var_dump($com);
 	if(!$file=popen($com,"r")) echo "An error occurred executing the command $com.".str_system_support_err."<br/>\n";
 	$rank=0;
 	while($line=fgets($file))
