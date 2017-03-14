@@ -1,7 +1,7 @@
 <?php
-if (!defined('DBHOST')) define('DBHOST','localhost');
+if (!defined('DBHOST')) define('DBHOST','db.eecis.udel.edu');
 if (!defined('DBUSER')) define('DBUSER','dbdbadmin');
-if (!defined('DBPASS')) define('DBPASS','3Lu9PapFHUapaJVd');
+if (!defined('DBPASS')) define('DBPASS','ChangeME');
 if (!defined('DBNAME')) define('DBNAME','virlab');
 if (!defined('DBPORT')) define('DBPORT',3306);
 if (!defined('MyUserGroupID')) define('MyUserGroupID', '1');

@@ -73,7 +73,7 @@ $( "#resetPWWindow" ).dialog({
 		$userID=$_SESSION['userID'];
 		
 		if(isset($_POST['resetUserID']) && !empty($_POST['resetUserID'])) resetPassword($_POST['resetUserID']);
-		else if(isset($_POST['deleteUserID']) && !empty($_POST['deleteUserID'])) deleteUser($mysql,$mysqlEva,$_POST['deleteUserID']);
+		else if(isset($_POST['deleteUserID']) && !empty($_POST['deleteUserID'])) deleteUser($_POST['deleteUserID']);
 
 		echo "<table id='usersTab' class='ui-widget ui-widget-content' align='center'>\n";
 		echo "<thread>\n";

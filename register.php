@@ -1,5 +1,7 @@
 <?php 
   require_once("include/superHead.php"); 
+  require_once ("conf/conf.php");
+  $phpExMessage="";
   require_once("include/mysql_connect.php");
 ?>
 
@@ -94,7 +96,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="lastname">Last Name</label>
-				    <input type="text" class="form-control" name="firstName" maxLength="50" placeholder="">
+				    <input type="text" class="form-control" name="lastName" maxLength="50" placeholder="">
 				  </div>
 				  <div class="form-group">
 				    <label for="affiliation">Affiliation</label>

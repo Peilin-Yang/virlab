@@ -7,7 +7,7 @@
 
 <!-- JavaScript plugins (requires jQuery) -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- Bootstrap Glyphicons -->
 <link href="./bootstrap-glyphicons/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
 <link href="./bootstrap-glyphicons/css/docs.css" rel="stylesheet" media="screen">
