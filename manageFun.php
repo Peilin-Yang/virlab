@@ -74,7 +74,7 @@ $( "#delWindow" ).dialog({
 		echo "<strong>This is the place that you can manage your retrieval functions.</strong><br><br>";
 		
 		$username=$_SESSION['user'];
-        $userID=$_SESSION['userID'];		
+                $userID=$_SESSION['userID'];		
 
 		if(isset($_POST['show']) && !empty($_POST['show'])) {
 			$groupID=$_POST['show'];
@@ -135,15 +135,11 @@ $( "#delWindow" ).dialog({
 		echo "</tr>\n</thread>\n";
 		echo "<tbody>\n";
 		
-		$query= "select groupID,groupName,groupStatus,userID from functionGroup where userID=$userID || userID=0";
+		$query= "select groupID,groupName,groupStatus,userID from functionGroup where userID=$userID";
 		$resultArray=readDatabase($query);
 		foreach($resultArray as $result) {
 			$groupID=$result[0];
 			$groupName=$result[1];
-            // Hide BM25 as Dr.Fang required, Peilin.
-            //if ($groupName == "BM25") {
-              //continue;
-            //}
 			$groupStatus=$result[2];
 			echo "<script>\n";
 			echo "evalTab['$groupName']=$groupID;\n";

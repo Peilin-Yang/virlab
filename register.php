@@ -59,7 +59,7 @@
 					$resultArray = readDatabase($query);
 					if($resultArray && isset($resultArray[0][0]))
 					{
-						echo '<p class="bg-danger text-danger"> *The username $username is already exist! Try another!</p>';
+						echo "<p class=\"bg-danger text-danger\"> *The username $username is already exist! Try another!</p>";
 					}
 					else
 					{
