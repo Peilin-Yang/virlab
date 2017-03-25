@@ -37,20 +37,21 @@ $( "#delButton" ).click(function() {
 	if($('#combobox-retFun').val() !='')
 	{
 		var selectedItem = h[$('#combobox-retFun').val()];
-		if(typeTab[$('#combobox-retFun').val()] == 255) alert("default function could not be deleted!");
+		if(typeTab[$('#combobox-retFun').val()] == 255) alert("Default function could not be deleted!");
 		else $("#delWindow").dialog("open");
 	}
 });
 
 $( "#saveButton" ).click(function() {
 	var saveFilename=document.forms['retFun-editor'].filename.value
-	if(saveFilename == '') alert("filename should not be empty!");
+	if(saveFilename == '') alert("Filename should not be empty!");
 	else
 	{
 		if(h[saveFilename] != undefined)
 		{
-			if(typeTab[saveFilename] == 255) alert("default function could not be overwrite!");
-			else $("#saveWindow").dialog("open");
+			if(typeTab[saveFilename] == 255) alert("Default function could not be overwrite!");
+			// else $("#saveWindow").dialog("open");
+			else alert("This function name has been used. Please select a new one.");
 		}
 		else
 		{
@@ -129,7 +130,7 @@ var myCodeMirror = CodeMirror.fromTextArea(func_txt, {
 			$query = "select groupName,groupPath from functionGroup where groupID=$theGroupID";
 			$resultArray=readDatabase($query);
 			if(!isset($resultArray[0][0])) {
-				$displayTextarea = "could not find the retrieval function group\n";
+				$displayTextarea = "Could not find the retrieval function group\n";
 			}
 			else {
 				$displayTextarea = file_get_contents($resultArray[0][1]);
@@ -168,7 +169,7 @@ var myCodeMirror = CodeMirror.fromTextArea(func_txt, {
 		//echo "<button id='delButton'>DELETE</button><br/>\n";
 
 		echo "<form id='retFun-editor' action='addFun.php' method='post'><br/>\n";
-		echo "function name: <input type='text' name='filename' value=$displayFilename ><br/>\n";
+		echo "Function name: <input type='text' name='filename' value=$displayFilename ><br/>\n";
 		echo "Content : <textarea id=\"func_txt\" name='txtarea' rows='20' cols='200' style='width: 600px;'>\n";
 		echo $displayTextarea;
 		echo "</textarea>\n";
