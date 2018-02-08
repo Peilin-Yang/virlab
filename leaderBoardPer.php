@@ -31,7 +31,7 @@ include_once ("include/leaderBoardHeader.php");
           <li><a href="addFun.php">Retrieval Function</a></li>
           <li><a href="addEngine.php">Search Engine</a></li>
           <li class="active"><a href="#">LeaderBoard</a></li>
-          <li><a href="/about.php">About</a></li>
+          <li><a href="about.php">About</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:16px;">Welcome, <?php echo $_SESSION['user']; ?><b class="caret"></b></a>
             <ul class="dropdown-menu">

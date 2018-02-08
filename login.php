@@ -91,9 +91,17 @@ require_once ("include/mysql_connect.php");
 				    <input type="password" class="form-control" name="password" placeholder="Password">
 				  </div>
  				  <button type="submit" class="btn btn-default">Log in</button> 
+ 				                                
+ 				  <input style="float:right" type="button" class="btn btn-default" value="Register" onclick="window.location.href='register.php'" />
 				</form>
+				
+<!-- 				<form>
+				<input type="button" class="btn btn-default" value="Register" onclick="window.location.href='register.php'" />
+				</form>  -->
 
-				<a href="register.php">Register</a><br/>
+
+				<!-- <div style=right width="50%" position="absolute" right="0px" ><a href="register.php">Register</a><br/></div> -->
+				
 
 
 			</div>
