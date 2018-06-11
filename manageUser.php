@@ -95,6 +95,9 @@ $( "#resetPWWindow" ).dialog({
 		$resultArray=readDatabase($query);
 		foreach($resultArray as $result)
 		{
+			if ($result[2]==255 && $_SESSION['admin']==127) {
+			   continue;
+			}
 			$theUserID=$result[0];
 			$loginName=$result[1];
 			$userType=$result[2];

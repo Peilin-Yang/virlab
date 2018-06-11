@@ -69,7 +69,8 @@
 						if(isset($_POST["affiliation"])) $affiliation=$_POST["affiliation"];
 						if(isset($_POST["email"])) $email=$_POST["email"];
 						$userGroup = MyUserGroupID;
-						$query="insert into user(loginName,password,usertype,firstName,lastName,affiliation,email,userGroup) values('$username',sha1('wh$password'),0,'$firstName','$lastName','$affiliation','$email',$userGroup)";
+						$password=sha1(passsalt.$password);
+						$query="insert into user(loginName,password,usertype,firstName,lastName,affiliation,email,userGroup) values('$username','$password',0,'$firstName','$lastName','$affiliation','$email',$userGroup)";
 						$mysql->query($query);
 						echo '<p class="bg-info text-info"> *Please wait for the administer to approve your request!</p>';
 					}
