@@ -91,7 +91,7 @@ include_once ("include/leaderBoardHeader.php");
                     $MAP=$row_eval[4];
                     $P30=$row_eval[5];
 
-                    if($uid == 0){
+                    if($uid == 1){
                         // super user, do not have user name.
                         continue;
                     }
