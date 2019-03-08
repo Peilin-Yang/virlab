@@ -84,7 +84,7 @@ function eva_click(clicked_id)
 				echo "<th>".$paraArray[$i]."</th>\n";
 			}
 			echo "<th>MAP</th>\n";
-			echo "<th>P30</th>\n";
+			echo "<th>P@30</th>\n";
 			echo "</tr>\n</thread>\n";
 			echo "<tbody>\n";
 			$query = "select functionID$paraString from function where groupID = $groupID";

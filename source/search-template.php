@@ -155,7 +155,7 @@ $( "#accordion" ).accordion({ heightStyle: "content" });
 			}
 		}
 		echo "<font color='red'>MAP=".$MAP/$relN." &nbsp&nbsp";
-		echo "P30=".$P30/30.0."</font><br/>\n";
+		echo "P@30=".$P30/30.0."</font><br/>\n";
 	}
 	else {
 		while(!feof($file) && ($i++) < $endR) {
